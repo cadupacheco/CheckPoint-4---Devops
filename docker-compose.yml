@@ -1,0 +1,53 @@
+services:
+
+  db:
+    build:
+      context: ./database
+      dockerfile: Dockerfile
+
+    container_name: dimdim-db
+
+    environment:
+      POSTGRES_DB: dimdim
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    networks:
+      - dimdim-network
+
+
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+
+    container_name: dimdim-app
+
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/dimdim
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      - db
+
+    networks:
+      - dimdim-network
+
+
+volumes:
+  postgres_data:
+
+
+networks:
+  dimdim-network:
+    driver: bridge
