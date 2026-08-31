@@ -2,10 +2,16 @@
 
 Checkpoint de DevOps Tools & Cloud Computing desenvolvido para a FIAP.
 
-## Aluno
+## Integrantes
 
-Carlos Eduardo Rodrigues Coelho Pacheco  
-RM557323
+**Carlos Eduardo Rodrigues Coelho Pacheco**  
+RM: 557323
+
+**João Pedro Amorim Brito Virgens**  
+RM: 559213
+
+**Pedro Augusto Costa Ladeira**  
+RM: 558514
 
 ## Projeto
 
