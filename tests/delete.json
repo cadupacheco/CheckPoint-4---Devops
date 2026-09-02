@@ -1,0 +1,5 @@
+﻿{
+  "metodo": "DELETE",
+  "endpoint": "/api/transacoes/1",
+  "descricao": "Exclusao de uma transacao pelo ID"
+}

@@ -1,0 +1,5 @@
+﻿{
+  "metodo": "GET",
+  "endpoint": "/api/transacoes/1",
+  "descricao": "Consulta de uma transacao pelo ID"
+}
